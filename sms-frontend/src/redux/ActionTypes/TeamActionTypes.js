@@ -1,0 +1,7 @@
+export const TeamActionTypes = {
+    ADD_TEAM:'ADD_TEAM',
+    UPDATE_TEAM:'UPDATE_TEAM',
+    SET_TEAMS:'SET_TEAMS',
+    SELECTED_TEAM:'SELECTED_TEAM',
+    DELETE_TEAM:'DELETE_TEAM',
+}

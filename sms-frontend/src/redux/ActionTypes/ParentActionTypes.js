@@ -1,0 +1,9 @@
+export const ParentActionTypes = {
+    //Create, Get, Update and Delete Parents
+    ADD_PARENT:'ADD_PARENT',
+    ADD_PARENTS: 'ADD_PARENTS',
+    SET_PARENTS: 'SET_PARENTS',
+    SELECTED_PARENT: 'SELECTED_PARENT',
+    UPDATE_PARENT: 'UPDATE_PARENT',
+    CHANGE_PARENT_STATUS: 'CHANGE_PARENT_STATUS',
+}

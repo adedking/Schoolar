@@ -1,0 +1,9 @@
+export const StudentActionTypes = {
+    //Create, Get, Update and Delete Students
+    ADD_STUDENT:'ADD_STUDENT',
+    ADD_STUDENTS: 'ADD_STUDENTS',
+    SET_STUDENTS: 'SET_STUDENTS',
+    SELECTED_STUDENT: 'SELECTED_STUDENT',
+    UPDATE_STUDENT: 'UPDATE_STUDENT',
+    CHANGE_STUDENT_STATUS: 'CHANGE_STUDENT_STATUS',
+}
