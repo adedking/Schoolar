@@ -1,15 +1,15 @@
-import './App.scss';
+
 import React, { useEffect, useState } from 'react'
 import SidebarNav from './components/sidebar/Sidebar';
 import NavBar from './components/navigation/NavBar';
-import Auth from './components/authPages/Auth';
-import Employees from './components/app_modules/employees/Employees';
-import Dashboard from './components/app_modules/dashboard/Dashboard';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { connect } from 'react-redux';
 
 import 'bootstrap-daterangepicker/daterangepicker.css';
-import { Students } from './components/app_modules/students/Students';
+import Dashboard from './pages/dashboard/Dashboard';
+import Employees from './pages/employees/Employees';
+import Students from './pages/students/Students';
+import Auth from './pages/authPages/Auth';
 
 const App = ( props ) => {
 
@@ -25,7 +25,7 @@ const App = ( props ) => {
             if (window.location.pathname === "/login" || window.location.pathname === "/signup" || window.location.pathname === "/forgot-password" ) return
             window.location.replace("/login");
         };
-    })
+    }, [])
 
   return (
     <div>

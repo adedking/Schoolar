@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import ForgetPasswordForm from './forms/ForgetPasswordForm';
 import LoginForm from './forms/LoginForm';
 import SignUpForm from './forms/SignUpForm';
-import loginImage from "./img1.jpg";
+import loginImage from "../../assets/images/auth-image.jpg";
 
 export const Auth = (props) => {
     return (

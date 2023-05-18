@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Widget, Widget2, Widget3 } from './dashboardWidgetSection/Widgets';
-import './Dashboard.scss';
-import DashboardMain from './dashMainSection/DashboardMain';
+import { Widget, Widget2, Widget3 } from './dashboardComponents/dashboardWidgetSection/Widgets';
+import DashboardMain from './dashboardComponents/dashMainSection/DashboardMain';
 
 export const Dashboard = (props) => {
     return (

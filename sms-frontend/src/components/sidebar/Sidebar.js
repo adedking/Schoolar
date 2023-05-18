@@ -5,13 +5,11 @@ import {
   FaTachometerAlt,
   FaBriefcase,
   FaTimes,
-  FaCalendarAlt,
   FaFileContract,
   FaUserGraduate,
   FaUserTie,
   FaRegCopyright,
   FaCog,
-  FaWallet,
   FaAddressBook,
   FaWarehouse,
 } from "react-icons/fa";
@@ -22,6 +20,48 @@ const Sidebar = ({ sidenavToggle, setSidenavToggle }) => {
   const changeDisplay = () => {
     setSidenavToggle(false);
   };
+  const sideBarLinks = [
+    {
+      title: 'Dashboard',
+      path: '/dashboard',
+      icon: <FaTachometerAlt />
+    },
+    {
+      title: 'Employees',
+      path: '/employees',
+      icon: <FaBriefcase />
+    },
+    {
+      title: 'Students',
+      path: '/students',
+      icon: <FaUserGraduate />
+    },
+    {
+      title: 'Parents/Guardian',
+      path: '/parents',
+      icon: <FaUserTie />
+    },
+    {
+      title: 'Classes',
+      path: '/classes',
+      icon: <FaWarehouse />
+    },
+    {
+      title: 'Reports',
+      path: '/reports',
+      icon: <FaFileContract />
+    },
+    {
+      title: 'Settings',
+      path: '/settings',
+      icon: <FaCog />
+    },
+    {
+      title: 'Contact',
+      path: '/contact-us',
+      icon: <FaAddressBook />
+    }
+  ]
 
   useEffect(() => {
     document.addEventListener("mousedown", (event) => {
@@ -33,6 +73,7 @@ const Sidebar = ({ sidenavToggle, setSidenavToggle }) => {
       }
     });
   });
+
   return (
     <aside
       className={`side-nav ${!sidenavToggle ? "side-nav-inactive" : ""}`}
@@ -45,86 +86,17 @@ const Sidebar = ({ sidenavToggle, setSidenavToggle }) => {
         <h1>sms</h1>
       </div>
       <div id="sidenav-body">
-        <NavLink
-          to="/dashboard"
+        {sideBarLinks.map((items, index) => (
+          <NavLink
+          to={items.path}
           activeClassName="active-sidenav-link"
           className="sidenav-link"
         >
-          <FaTachometerAlt />
-          Dashboard
+          {items.icon}
+          {items.title}
         </NavLink>
-        <NavLink
-          to="/employees"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaBriefcase />
-          Employees
-        </NavLink>
-        <NavLink
-          to="/students"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaUserGraduate />
-          Students
-        </NavLink>
-        <NavLink
-          to="/parents"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaUserTie />
-          Parents/Guardian
-        </NavLink>
-        <NavLink
-          to="/classes"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaWarehouse />
-          Classes
-        </NavLink>
-        <NavLink
-          to="/calendar"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaCalendarAlt />
-          Calendar
-        </NavLink>
-        <NavLink
-          to="/wallet"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaWallet />
-          Wallet
-        </NavLink>
-        <NavLink
-          to="/reports"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaFileContract />
-          Reports
-        </NavLink>
-        <NavLink
-          to="/settings"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaCog />
-          Settings
-        </NavLink>
-        <NavLink
-          to="/contact-us"
-          activeClassName="active-sidenav-link"
-          className="sidenav-link"
-        >
-          <FaAddressBook />
-          Contact us
-        </NavLink>
+        ))}
+
       </div>
       <div id="sidenav-footer">
         <div className="copyright">

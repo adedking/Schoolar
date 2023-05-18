@@ -343,7 +343,22 @@ export const Students = (props) => {
               <div className="none-data-added">
                 <div className="no-title">No Student Added</div>
                 <FaUserTimes className="no-logo" />
-                <button className="add-button">Add Student</button>
+                <div className="main-page-header">
+                  <button
+                    className="add title-button"
+                    onClick={addStudentButtonClick}
+                    ref={buttonDropdownSelectorRef}
+                  >
+                    <FaPlus /> New Students
+                    <FaCaretDown />
+                  </button>
+                  <AddStudentDropdown
+                    addStudentButtonClicked={addStudentButtonClicked}
+                    setAddStudentButtonClicked={setAddStudentButtonClicked}
+                    showSingleStudentModal={showSingleStudentModal}
+                    buttonDropdownSelectorRef={buttonDropdownSelectorRef}
+                  />
+                </div>
               </div>
             )}
           </div>
